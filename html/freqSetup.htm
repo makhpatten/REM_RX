@@ -1,0 +1,103 @@
+<html>
+
+   <script type="text/javascript">
+   
+      window.onload = function() {
+         document.getElementById("myForm").reset();
+      }
+   
+   </script>
+   
+   <head>
+   
+      <title>DNR-1200 IP Setup</title>
+   
+   </head>
+   
+   <body color="#ffffff" link="#0000ff" vlink="#0000ff" alink="#ff0000>
+      <font face="Times New Roman,serif">
+      <form action="freqpost.htm" method="post">
+         <table border="0" cellpadding="5" cellspacing="0" width="800">
+            <tr>
+<td colspan="2" align="left" valign="bottom">
+<!--
+<img src="tektron4.gif" alt="Tektron" height="100" width="400">
+-->
+	<FONT face="Arial, Sans-Serif" size="2">
+<h2>
+DNR-1200 
+<!--FUNCTIONCALL displaySerialNum -->
+</h2>
+    	</FONT> 
+</td>
+   <td align="center" valign="bottom">
+		<FONT face="Arial, Sans-Serif" size="2">
+	      <h4> 
+			  <a href="receiver.htm">Receiver</a> | <a href="Channels_txid.htm">Channels</a> |
+			  <a href="Setup.htm">IP Setup</a> | 
+<!--			  <a href="connected.htm">Connected</a> | -->
+			  <a href="logout.htm">Logout</a> 
+		  </h4>
+    	</FONT> 
+	</TD>
+            </tr>
+            <tr>
+               <td colspan="3"><hr size="1" noshade></td>
+            </tr>
+            <tr>
+               <td colspan="2"><font face="Arial,sans-serif"><h3>Receiver Frequencies</h3></font></td>
+            </tr>
+            <tr bgcolor="#eff1f4">
+               <td width="100">Channel 8:</td> 
+               <td width="75"><!--FUNCTIONCALL DisplayFreq8 --></td>
+               <td>kHz</td>
+            </tr>
+            <tr>
+               <td width="100">Channel 7:</td> 
+               <td width="75"><!--FUNCTIONCALL DisplayFreq7 --></td>
+               <td>kHz</td>
+            </tr>
+            <tr bgcolor="#eff1f4">
+               <td width="100">Channel 6:</td> 
+               <td width="75"><!--FUNCTIONCALL DisplayFreq6 --></td>
+               <td>kHz</td>
+            </tr>
+            <tr>
+               <td width="100">Channel 5:</td> 
+               <td width="75"><!--FUNCTIONCALL DisplayFreq5 --></td>
+               <td>kHz</td>
+            </tr>
+            <tr bgcolor="#eff1f4">
+               <td width="100">Channel 4:</td> 
+               <td width="75"><!--FUNCTIONCALL DisplayFreq4 --></td>
+               <td>kHz</td>
+            </tr>
+            <tr>
+               <td width="100">Channel 3:</td> 
+               <td width="75"><!--FUNCTIONCALL DisplayFreq3 --></td>
+               <td>kHz</td>
+            </tr>
+            <tr bgcolor="#eff1f4">
+               <td width="100">Channel 2:</td> 
+               <td width="75"><!--FUNCTIONCALL DisplayFreq2 --></td>
+               <td>kHz</td>
+            </tr>
+            <tr>
+               <td width="100">Channel 1:</td> 
+               <td width="75"><!--FUNCTIONCALL DisplayFreq1 --></td>
+               <td>kHz</td>
+            </tr>
+            <tr>
+               <td colspan="2"><input type="submit" value="Submit New Frequencies"> 
+<!--
+               <font color="#ff0000" face="Arial,sans-serif" size="2">Submitting new frequencies will close existing connections</font>
+-->
+               </td>
+            </tr>
+         </table>
+      </form>
+      </font>
+   
+   </body>
+
+</html>

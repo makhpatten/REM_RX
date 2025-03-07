@@ -1,0 +1,271 @@
+<html>
+
+   <script type="text/javascript">
+   
+      window.onload = function() {
+         document.getElementById("myForm").reset();
+      }
+   
+   </script>
+   
+   <head>
+   
+      <title>DNR-1200 IP Setup</title>
+   
+   </head>
+   
+   <body color="#ffffff" link="#0000ff" vlink="#0000ff" alink="#ff0000>
+      <font face="Times New Roman,serif">
+      <form action="formpost.htm" method="post">
+         <table border="0" cellpadding="5" cellspacing="0" width="800">
+            <tr>
+<td colspan="2" align="left" valign="bottom">
+<!--
+<img src="tektron4.gif" alt="Tektron" height="100" width="400">
+-->
+	<FONT face="Arial, Sans-Serif" size="2">
+<h2>
+DNR-1200 
+<!--FUNCTIONCALL displaySerialNum -->
+</h2>
+    	</FONT> 
+</td>
+   <td align="center" valign="bottom">
+		<FONT face="Arial, Sans-Serif" size="2">
+	      <h4> 
+			  <a href="receiver.htm">Receiver</a> | <a href="Channels_txid.htm">Channels</a> |
+<!--			  <a href="connected.htm">Connected</a> | -->
+			  <a href="freqSetup.htm">Freq Setup</a> | 
+			  <a href="logout.htm">Logout</a> 
+		  </h4>
+    	</FONT> 
+	</TD>
+            </tr>
+            <tr>
+               <td colspan="3"><hr size="1" noshade></td>
+            </tr>
+            <tr>
+               <td colspan="3"><font face="Arial,sans-serif"><h3>Network Settings</h3></font></td>
+            </tr>
+            <tr bgcolor="#eff1f4">
+               <td width="200">Device IP address:</td> 
+               <td width="300"><!--FUNCTIONCALL IPMode --><!--FUNCTIONCALL DeviceAddress --></td>
+               <td width="300"><!--FUNCTIONCALL DisplayDeviceAddress --></td>
+            </tr>
+            <tr>
+               <td>Device net mask:</td>
+               <td><!--FUNCTIONCALL DeviceMask --></td>
+               <td><!--FUNCTIONCALL DisplayDeviceMask --></td>
+            </tr>
+            <tr bgcolor="#eff1f4">
+               <td>Device gateway:</td>
+               <td><!--FUNCTIONCALL DeviceGate --></td>
+               <td><!--FUNCTIONCALL DisplayDeviceGate --></td>
+            </tr>
+            <tr>
+               <td>DNS server:</td>
+               <td><!--FUNCTIONCALL DeviceDns --></td>
+               <td><!--FUNCTIONCALL DisplayDeviceDns --></td>
+            </tr>
+            <tr bgcolor="#eff1f4">
+               <td>Device name (for DHCP):</td>
+               <td><!--FUNCTIONCALL DeviceName --></td>
+               <td></td>
+            </tr>
+            <tr>
+               <td>Webpage port number:</td>
+               <td width="300"><!--FUNCTIONCALL WebpagePort -->Requires power cycle to take effect</td>
+               <td></td>
+            </tr>
+            <tr>
+               <td colspan="3"><hr size="1" noshade></td>
+            </tr>
+            <tr>
+               <td colspan="3"><font face="Arial,sans-serif"><h3>Connection Settings</h3></font></td>
+            </tr>
+            <tr>
+               <td colspan="3"><h4>Incoming connection settings:</h4></td>
+            </tr>
+            <tr bgcolor="#eff1f4">
+               <td colspan="2">Listen for incoming network connections:</td>
+               <td width="300"><!--FUNCTIONCALL ListenCheck --></td>
+            </tr>
+            <tr>
+               <td colspan="2">Listening port number:</td>
+               <td width="300"><!--FUNCTIONCALL ListenPort --></td>
+            </tr>
+            <tr bgcolor="#eff1f4">
+               <td colspan="2">Timeout and disconnect after this many seconds of inactivity:</td>
+               <td><!--FUNCTIONCALL ListenTimeout --></td>
+            </tr>
+            <tr>
+               <td colspan="2">Allow new connection if the existing connection has been idle for this many seconds:</td>
+               <td><!--FUNCTIONCALL NewTimeout --></td>
+            </tr>
+            <tr>
+               <td colspan="3">&nbsp;</td>
+            </tr>
+            <tr>
+               <td colspan="3"><h4>Outgoing connection settings:</h4></td>
+            </tr>
+            <tr bgcolor="#eff1f4">
+               <td colspan="2">When to make outgoing connections:</td>
+               <td><!--FUNCTIONCALL ConnMode --></td>
+            </tr>
+            <tr>
+               <td colspan="2">Connect on network port:</td>
+               <td><!--FUNCTIONCALL ConnectPort --></td>
+            </tr>
+            <tr bgcolor="#eff1f4">
+               <td colspan="2">Connect/send to this address:</td>
+               <td><!--FUNCTIONCALL ConnectName --></td>
+            </tr>
+            <tr>
+               <td colspan="2">Timeout and disconnect after this many seconds of inactivity:</td>
+               <td><!--FUNCTIONCALL ConnectTimeout --></td>
+            </tr>
+            <tr bgcolor="#eff1f4">
+               <td colspan="2">Retry failed outgoing connection after this many seconds:</td>
+               <td><!--FUNCTIONCALL OutgoingTimeout --></td>
+            </tr>
+            <tr>
+               <td colspan="3"><hr size="1" noshade></td>
+            </tr>
+            <tr>
+               <td colspan="3"><font face="Arial,sans-serif"><h3>Web Page Receiver Messaging</h3></font></td>
+            </tr>
+            <tr>
+               <td colspan="2">Allow background serial messages:</td>
+               <td><!--FUNCTIONCALL NetburnerStatusMsgs --></td>
+            </tr>
+            <tr bgcolor="#eff1f4">
+               <td colspan="2">Milliseconds until receiver data timeout (0 indicates receiver data never times out):</td>
+               <td><!--FUNCTIONCALL noReceiverDataTimeout --></td>
+            </tr>
+            <tr>
+               <td colspan="3"><hr size="1" noshade></td>
+            </tr>
+
+<!--
+            <tr>
+               <td colspan="3"><font face="Arial,sans-serif"><h3>Serial Data Port Settings</h3></font></td>
+            </tr>
+            <tr bgcolor="#eff1f4">
+               <td>Serial data port:</td>
+               <td colspan="2"><!--FUNCTIONCALL SerialPort --></td>
+            </tr>
+            <tr>
+               <td>Data baud rate:</td>
+               <td colspan="2"><!--FUNCTIONCALL DataBaudRate --></td>
+            </tr>
+            <tr bgcolor="#eff1f4">
+               <td>Data bits:</td>
+               <td colspan="2"><!--FUNCTIONCALL DataBits --></td>
+            </tr>
+            <tr>
+               <td>Stop bits:</td>
+               <td colspan="2"><!--FUNCTIONCALL StopBits --></td>
+            </tr>
+            <tr bgcolor="#eff1f4">
+               <td>Data parity:</td>
+               <td colspan="2"><!--FUNCTIONCALL DataParity --></td>
+            </tr>
+            <tr>
+               <td>Flow control:</td>
+               <td colspan="2"><!--FUNCTIONCALL FlowMode --></td>
+            </tr>
+            <tr>
+               <td colspan="3"><font face="Arial,sans-serif" size="2"><a href="jumper.htm">Jumper configuration</a></font></td>
+            </tr>
+            <tr>
+               <td colspan="3"><hr size="1" noshade></td>
+            </tr>
+            <tr>
+               <td colspan="3"><font face="Arial,sans-serif"><h3>Serial Data Notification Settings</h3></font></td>
+            </tr>
+            <tr bgcolor="#eff1f4">
+               <td colspan="2">Send serial message when TCP connection is established:</td>
+               <td><!--FUNCTIONCALL SendMsgCheck --></td>
+            </tr>
+            <tr>
+               <td>Message to send:</td>
+               <td colspan="2"><!--FUNCTIONCALL SendMsgMsg --></td>
+            </tr>
+            <tr bgcolor="#eff1f4">
+               <td colspan="2">Send serial message when TCP connection is lost:</td>
+               <td><!--FUNCTIONCALL SendLossMsgCheck --></td>
+            </tr>
+            <tr>
+               <td>Message to send:</td>
+               <td colspan="2"><!--FUNCTIONCALL SendLossMsgMsg --></td>
+            </tr>
+            <tr>
+               <td colspan="3"><font face="Arial,sans-serif" size="2"><a href="format-help.htm">Message formatting codes</a></font></td>
+            </tr>
+            <tr>
+               <td colspan="3">&nbsp;</td>
+            </tr>
+            <tr bgcolor="#eff1f4">
+               <td colspan="2">Send serial break when incoming TCP connection is established:</td>
+               <td><!--FUNCTIONCALL SendBreakConnect --></td>
+            </tr>
+            <tr>
+               <td colspan="2">Break interval in tenths of a second:</td>
+               <td><!--FUNCTIONCALL SendBreakInterval --></td>
+            </tr>
+            <tr bgcolor="#eff1f4">
+               <td colspan="2">Send serial break when an incoming character is received:</td>
+               <td><!--FUNCTIONCALL SendBreakSerial --></td>
+            </tr>
+            <tr>
+               <td colspan="2">Send serial break when this character is received (in hexadecimal):</td>
+               <td><!--FUNCTIONCALL HexBreakKey --></td>
+            </tr>
+            <tr>
+               <td colspan="3"><hr size="1" noshade></td>
+            </tr>
+ -->
+            <tr>
+               <td colspan="3"><font face="Arial,sans-serif"><h3>User Name and Password</h3></font></td>
+            </tr>
+            <tr bgcolor="#eff1f4">
+               <td colspan="1">User name:</td>
+               <td colspan="2"><!--FUNCTIONCALL UserName --></td>
+            </tr>
+            <tr>
+               <td colspan="1">Password:</td>
+               <td colspan="2"><!--FUNCTIONCALL Password --> <font face="Arial,sans-serif" size="2">Not Case Sensitive. Leave blank for no password</font></td>
+            </tr>
+            <tr bgcolor="#eff1f4">
+               <td colspan="1">Repeat password:</td>
+               <td colspan="2"><!--FUNCTIONCALL RPassword --></td>
+            </tr>
+            <tr>
+               <td colspan="1">Password timeout length (seconds, minimum 30):</td>
+               <td colspan="2"><!--FUNCTIONCALL PasswordTimeout --></td>
+            </tr>
+            <tr>
+               <td colspan="3"><hr size="1" noshade></td>
+            </tr>
+            <tr>
+               <td colspan="3">&nbsp;</td>
+            </tr>
+            <tr>
+               <td colspan="3"><input type="submit" value="Submit New Settings"> <font color="#ff0000" face="Arial,sans-serif" size="2">New settings will close existing connections</font></td>
+            </tr>
+            <tr>
+               <td colspan="3"><font face="Arial,sans-serif" size="1"><!--FUNCTIONCALL DisplayFirmwareVersion --></font></td>
+            </tr>
+            <tr>
+               <td colspan="3"><font face="Arial,sans-serif" size="1"><!--FUNCTIONCALL DisplayReceiverFirmwareVersion --></font></td>
+            </tr>
+            <tr>
+               <td colspan="3"><font face="Arial,sans-serif" size="2"><a href="diag.htm">Diagnostics</a></font></td>
+            </tr>
+         </table>
+      </form>
+      </font>
+   
+   </body>
+
+</html>

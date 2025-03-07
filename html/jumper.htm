@@ -1,0 +1,314 @@
+<html>
+
+   <head>
+   
+      <title>NetBurner SB70LC Serial-to-Ethernet Application - Jumper Configuration</title>
+   
+   </head>
+   
+   <body color="#ffffff" link="#0000ff" vlink="#0000ff" alink="#ff0000>
+      <font face="Times New Roman,serif">
+         <table border="0" cellpadding="5" cellspacing="0" width="800">
+            <tr>
+               <td><img src="netburner-logo.gif" alt="NetBurner Logo" height="93" width="200"></td>
+            </tr>
+            <tr>
+               <td><hr size="1" noshade></td>
+            </tr>
+            <tr>
+               <td align="center"><img src="sb70lc-adpt-jmpdiag.png" alt="SB70LC Adapter" height="381" width="491"></td>
+            </tr>
+            <tr>
+               <td align="center">SB70LC adapter board layout of jumpers and connectors</td>
+            </tr>
+            <tr>
+               <td><hr size="1" noshade></td>
+            </tr>
+            <tr>
+               <td><font face="Arial,sans-serif"><h3>DC Voltage Source</h3></font></td>
+            </tr>
+            <tr>
+               <td align="center">
+                  <table border="1" cellpadding="3" cellspacing="0" width="700">
+                     <tr bgcolor="#eff1f4">
+                        <td width="200"><b>Jumper Setting</b></td>
+                        <td width="500"><b>Signal Description</b></td>
+                     </tr>
+                     <tr>
+                        <td>JP2 [1-2]</td>
+                        <td>Supply power to the device through the USB connector (J20)</td>
+                     </tr>
+                     <tr>
+                        <td>JP2 [2-3]</td>
+                        <td>Supply power to the device through the external power jack (J9) or contact terminal (J10)</td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+            <tr>
+               <td><hr size="1" noshade></td>
+            </tr>
+            <tr>
+               <td><font face="Arial,sans-serif"><h3>UART 0 RS-232 via USB (J20)</h3></font></td>
+            </tr>
+            <tr>
+               <td align="center">
+                  <table border="1" cellpadding="3" cellspacing="0" width="700">
+                     <tr bgcolor="#eff1f4">
+                        <td width="200"><b>Jumper Setting</b></td>
+                        <td width="500"><b>Signal Description</b></td>
+                     </tr>
+                     <tr>
+                        <td>JP3 [1-2]</td>
+                        <td>UART 0 RX (required)</td>
+                     </tr>
+                     <tr>
+                        <td>JP4 [1-2]</td>
+                        <td>UART 0 CTS (optional)</td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+            <tr>
+               <td><hr size="1" noshade></td>
+            </tr>
+            <tr>
+               <td><font face="Arial,sans-serif"><h3>UART 0 RS-232 via DB9 (J1)</h3></font></td>
+            </tr>
+            <tr>
+               <td align="center">
+                  <table border="1" cellpadding="3" cellspacing="0" width="700">
+                     <tr bgcolor="#eff1f4">
+                        <td width="200"><b>Jumper Setting</b></td>
+                        <td width="500"><b>Signal Description</b></td>
+                     </tr>
+                     <tr>
+                        <td>JP3 [2-3]</td>
+                        <td>UART 0 RX (required)</td>
+                     </tr>
+                     <tr>
+                        <td>JP4 [2-3]</td>
+                        <td>UART 0 CTS (optional)</td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+            <tr>
+               <td><hr size="1" noshade></td>
+            </tr>
+            <tr>
+               <td><font face="Arial,sans-serif"><h3>UART 1 RS-232 via DB9 (J2)</h3></font></td>
+            </tr>
+            <tr>
+               <td align="center">
+                  <table border="1" cellpadding="3" cellspacing="0" width="700">
+                     <tr bgcolor="#eff1f4">
+                        <td width="200"><b>Jumper Setting</b></td>
+                        <td width="500"><b>Signal Description</b></td>
+                     </tr>
+                     <tr>
+                        <td>JP7 [1-2]</td>
+                        <td>UART 1 RX (required)</td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+            <tr>
+               <td><hr size="1" noshade></td>
+            </tr>
+            <tr>
+               <td><font face="Arial,sans-serif"><h3>UART 1 RS-485 Full-duplex via 5-pin Header (J4)</h3></font></td>
+            </tr>
+            <tr>
+               <td align="center">
+                  <table border="1" cellpadding="3" cellspacing="0" width="700">
+                     <tr bgcolor="#eff1f4">
+                        <td width="200"><b>Jumper Setting</b></td>
+                        <td width="500"><b>Signal Description</b></td>
+                     </tr>
+                     <tr>
+                        <td>JP6 [Open]</td>
+                        <td>Enable RS-485 full-duplex receiver (required)</td>
+                     </tr>
+                     <tr>
+                        <td>JP7 [2-3]</td>
+                        <td>UART 1 RX (required)</td>
+                     </tr>
+                     <tr>
+                        <td>JP8 [Open]</td>
+                        <td>Enable echo (required); receiver always stays active</td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+            <tr>
+               <td><hr size="1" noshade></td>
+            </tr>
+            <tr>
+               <td><font face="Arial,sans-serif"><h3>UART 1 RS-485 Half-duplex via 5-pin Header (J4)</h3></font></td>
+            </tr>
+            <tr>
+               <td align="center">
+                  <table border="1" cellpadding="3" cellspacing="0" width="700">
+                     <tr bgcolor="#eff1f4">
+                        <td width="200"><b>Jumper Setting</b></td>
+                        <td width="500"><b>Signal Description</b></td>
+                     </tr>
+                     <tr>
+                        <td>JP6 [Close]</td>
+                        <td>Enable RS-485 half-duplex receiver (required)</td>
+                     </tr>
+                     <tr>
+                        <td>JP7 [2-3]</td>
+                        <td>UART 1 RX (required)</td>
+                     </tr>
+                     <tr>
+                        <td>JP8 [Close/Open]</td>
+                        <td>Disable echo (close) or enable echo (open); when echo is disabled, receiver is off only when transmitter is sending</td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+            <tr>
+               <td><hr size="1" noshade></td>
+            </tr>
+            <tr>
+               <td><font face="Arial,sans-serif"><h3>UART 1 RS-485 Signal Polarity (J4)</h3></font></td>
+            </tr>
+            <tr>
+               <td align="center">
+                  <table border="1" cellpadding="3" cellspacing="0" width="700">
+                     <tr bgcolor="#eff1f4">
+                        <td width="200"><b>Jumper Setting</b></td>
+                        <td width="500"><b>Signal Description</b></td>
+                     </tr>
+                     <tr>
+                        <td>JP5 [Open]</td>
+                        <td>Normal polarity of UART 1 RS-485 +/- signals; see below for configuration of signals on J4</td>
+                     </tr>
+                     <tr>
+                        <td>JP5 [Close]</td>
+                        <td>Reverse polarity of UART 1 RS-485 +/- signals; see below for configuration of signals on J4</td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+            <tr>
+               <td><hr size="1" noshade></td>
+            </tr>
+            <tr>
+               <td><font face="Arial,sans-serif"><h3>UART 0 and 1 RS-232 DB9 Connector Pin-out (J1 and J2)</h3></font></td>
+            </tr>
+            <tr>
+               <td align="center">
+                  <table border="1" cellpadding="3" cellspacing="0" width="700">
+                     <tr bgcolor="#eff1f4">
+                        <td align="center" width="200"><b>Pin Number</b></td>
+                        <td width="500"><b>Signal Description</b></td>
+                     </tr>
+                     <tr>
+                        <td align="center">1</td>
+                        <td>Not connected</td>
+                     </tr>
+                     <tr>
+                        <td align="center">2</td>
+                        <td>Transmit data (TXD)</td>
+                     </tr>
+                     <tr>
+                        <td align="center">3</td>
+                        <td>Receive data (RXD)</td>
+                     </tr>
+                     <tr>
+                        <td align="center">4</td>
+                        <td>Short to pin 6</td>
+                     </tr>
+                     <tr>
+                        <td align="center">5</td>
+                        <td>Ground</td>
+                     </tr>
+                     <tr>
+                        <td align="center">6</td>
+                        <td>Short to pin 4</td>
+                     </tr>
+                     <tr>
+                        <td align="center">7</td>
+                        <td>Clear to send (CTS)</td>
+                     </tr>
+                     <tr>
+                        <td align="center">8</td>
+                        <td>Request to send (RTS)</td>
+                     </tr>
+                     <tr>
+                        <td align="center">9</td>
+                        <td>Not connected</td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+            <tr>
+               <td><hr size="1" noshade></td>
+            </tr>
+            <tr>
+               <td><font face="Arial,sans-serif"><h3>UART 1 RS-485 5-pin Header Connector Pin-out (J4)</h3></font></td>
+            </tr>
+            <tr>
+               <td align="center">
+                  <table border="1" cellpadding="3" cellspacing="0" width="700">
+                     <tr bgcolor="#dfe3ea">
+                        <td align="center" colspan="2" width="350"><b>Normal Polarity</b></td>
+                        <td align="center" colspan="2" width="350"><b>Reverse Polarity</b></td>
+                     </tr>
+                     <tr bgcolor="#eff1f4">
+                        <td align="center" width="100"><b>Pin Number</b></td>
+                        <td width="250"><b>Signal Description</b></td>
+                        <td align="center" width="100"><b>Pin Number</b></td>
+                        <td width="250"><b>Signal Description</b></td>
+                     </tr>
+                     <tr>
+                        <td align="center">1</td>
+                        <td>RX+ (full-duplex only)</td>
+                        <td align="center">1</td>
+                        <td>RX- (full-duplex only)</td>
+                     </tr>
+                     <tr>
+                        <td align="center">2</td>
+                        <td>RX- (full-duplex only)</td>
+                        <td align="center">2</td>
+                        <td>RX+ (full-duplex only)</td>
+                     </tr>
+                     <tr>
+                        <td align="center">3</td>
+                        <td>TX- (full or half-duplex)</td>
+                        <td align="center">3</td>
+                        <td>TX+ (full or half-duplex)</td>
+                     </tr>
+                     <tr>
+                        <td align="center">4</td>
+                        <td>TX+ (full or half-duplex)</td>
+                        <td align="center">4</td>
+                        <td>TX- (full or half-duplex)</td>
+                     </tr>
+                     <tr>
+                        <td align="center">5</td>
+                        <td>Ground</td>
+                        <td align="center">5</td>
+                        <td>Ground</td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+            <tr>
+               <td><hr size="1" noshade></td>
+            </tr>
+            <tr>
+               <td>&nbsp;</td>
+            </tr>
+            <tr>
+               <td><font face="Arial,sans-serif" size="2"><a href="index.htm">Back to configuration</a></font></td>
+            </tr>
+         </table>
+      </font>
+   
+   </body>
+
+</html>

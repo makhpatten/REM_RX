@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+
+ <html>
+
+
+<script src="SupportScriptsChan.js"></script>
+<script language="javascript">
+
+</script>
+   <script type="text/javascript">
+   
+      window.onload = function() {
+         document.getElementById("myForm").reset();
+      }
+   
+   </script>
+ <script type="text/JavaScript">
+<!--
+function timedRefresh(timeoutPeriod) {
+	setTimeout("location.reload(true);",timeoutPeriod);
+}
+   --> 
+</script>
+ 
+<script>
+function showPos(event, text) {
+var el, x, y;
+
+el = document.getElementById('PopUp');
+if (window.event) {
+x = window.event.clientX + document.documentElement.scrollLeft
++ document.body.scrollLeft;
+y = window.event.clientY + document.documentElement.scrollTop +
++ document.body.scrollTop;
+}
+else {
+x = event.clientX + window.scrollX;
+y = event.clientY + window.scrollY;
+}
+x -= 2; y -= 2;
+y = y+15
+el.style.left = x + "px";
+el.style.top = y + "px";
+el.style.display = "block";
+document.getElementById('PopUpText').innerHTML = text;
+}
+</script>
+
+<head>
+<title>DNR-1200 Channels Scan</title>
+ 	<link href="vumeter.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+   <body color="#ffffff" link="#0000ff" vlink="#0000ff" alink="#ff0000>
+<!--INCLUDE HtmlVar.h --> 
+      <font face="Times New Roman,serif">
+
+         <table border="0" cellpadding="5" cellspacing="0" width="400">
+<tr>
+<td align="left" valign="bottom">
+
+
+<!--
+<img src="tektron4.gif" alt="Tektron" height="100" width="400">
+-->
+
+	<FONT face="Arial, Sans-Serif" size="2">
+<h2>
+DNR-1200  
+<!--FUNCTIONCALL displaySerialNum -->
+</h2>
+    	</FONT> 
+</td>
+<td align="center" valign="bottom">
+	<FONT face="Arial, Sans-Serif" size="2">
+	      <h4> 
+<!--			  <a href="Index.htm">Main</a> |  
+			  <a href="receiver.htm">Receiver</a> |  
+			  <a href="Setup.htm">IP Setup</a> --> 
+			  <a href="Login.htm">Login</a> 
+		  </h4>
+    	</FONT>  
+	</TD>
+</tr>
+<tr><td colspan="2">
+<FONT face="Arial, Sans-Serif" size="2">
+<h2><!--FUNCTIONCALL receiverNameShow -->
+</H2>
+</FONT>
+</td></tr>
+
+            <tr>
+               <td colspan="2"><hr size="1" noshade></td>
+            </tr>
+ <!--
+ <tr>
+ <td colspan="2" align="center">
+	<FONT face="Arial, Sans-Serif" size="2">
+ <b><a href="Channels.htm">Update</a></b>
+</font>
+ </td>
+ </tr>
+-->
+	</table>
+
+<table>
+   <tr>
+      <td>
+<!--
+--------------------------------Here goes ajax stuff--------------------------
+-->      
+<table>
+  <tr> 
+      <td>
+         <div id='ajaxReloadEverything'> </div>
+      </td>
+      <td>
+          <table>
+            <tr>
+               <td align="center" width="100"><b>Channel</b></td>
+               <td align="center" width="10"></td>
+               <td align="center" width="25"><b>Off</b></td>
+               <td align="center" width="25"><b>On</b></td>
+               <td align="center" width="120"><b>Tx ID</b></td>
+            </tr>
+            
+<!--FUNCTIONCALL colorRowChan8>
+ 
+               <td align="center">
+                 <form action="writeChangeChan8.HTM" method="post">
+                    <button type="button" onclick="this.form.submit()">
+                       Channel 8
+                    </button>
+                 </form>
+               </td>
+               <td></td>
+               <td colspan=2  align="center"><form action="writeTxOnOffRadioChan8.HTM" method="post">
+               
+                  <!--FUNCTIONCALL chan8OnOffRadioButtons --></form>
+               </td>
+               <td colspan=2 align="center">
+                  <!--FUNCTIONCALL chan8TxIdShow -->
+               </td>
+            </tr>
+            
+               <!--FUNCTIONCALL colorRowChan7> 
+            
+            <td align="center">
+               <form action="writeChangeChan7.HTM" method="post"><button type="button" onclick="this.form.submit()">Channel 7</button></form>
+               </td>
+<td></td>
+<td colspan=2 align="center"><form action="writeTxOnOffRadioChan7.HTM" method="post">
+<!--FUNCTIONCALL chan7OnOffRadioButtons --></form></td>
+<td colspan=2 align="center">
+<!--FUNCTIONCALL chan7TxIdShow -->
+</td>
+</tr>
+<!--FUNCTIONCALL colorRowChan6> 
+<td align="center">
+<form action="writeChangeChan6.HTM" method="post"><button type="button" onclick="this.form.submit()">Channel 6</button></form>
+</td>
+<td></td>
+<td colspan=2 align="center"><form action="writeTxOnOffRadioChan6.HTM" method="post">
+<!--FUNCTIONCALL chan6OnOffRadioButtons --></form></td>
+<td colspan=2 align="center">
+<!--FUNCTIONCALL chan6TxIdShow -->
+</td>
+</tr>
+<!--FUNCTIONCALL colorRowChan5> 
+<td align="center">
+<form action="writeChangeChan5.HTM" method="post"><button type="button" onclick="this.form.submit()">Channel 5</button></form>
+</td>
+<td></td>
+<td colspan=2 align="center"><form action="writeTxOnOffRadioChan5.HTM" method="post">
+<!--FUNCTIONCALL chan5OnOffRadioButtons --></form></td>
+<td colspan=2 align="center">
+<!--FUNCTIONCALL chan5TxIdShow -->
+</td>
+</tr>
+<!--FUNCTIONCALL colorRowChan4> 
+<td align="center">
+<form action="writeChangeChan4.HTM" method="post"><button type="button" onclick="this.form.submit()">Channel 4</button></form>
+</td>
+<td></td>
+<td colspan=2 align="center"><form action="writeTxOnOffRadioChan4.HTM" method="post">
+<!--FUNCTIONCALL chan4OnOffRadioButtons --></form></td>
+<td colspan=2 align="center">
+<!--FUNCTIONCALL chan4TxIdShow -->
+</td>
+</tr>
+<!--FUNCTIONCALL colorRowChan3> 
+<td align="center">
+<form action="writeChangeChan3.HTM" method="post"><button type="button" onclick="this.form.submit()">Channel 3</button></form>
+</td>
+<td></td>
+<td colspan=2 align="center"><form action="writeTxOnOffRadioChan3.HTM" method="post">
+<!--FUNCTIONCALL chan3OnOffRadioButtons --></form></td>
+<td colspan=2 align="center">
+<!--FUNCTIONCALL chan3TxIdShow -->
+</td>
+</tr>
+<!--FUNCTIONCALL colorRowChan2> 
+<td align="center">
+<form action="writeChangeChan2.HTM" method="post"><button type="button" onclick="this.form.submit()">Channel 2</button></form>
+</td>
+<td></td>
+<td colspan=2 align="center"><form action="writeTxOnOffRadioChan2.HTM" method="post">
+<!--FUNCTIONCALL chan2OnOffRadioButtons --></form></td>
+<td colspan=2 align="center">
+<!--FUNCTIONCALL chan2TxIdShow -->
+</td>
+</tr>
+<!--FUNCTIONCALL colorRowChan1> 
+<td align="center">
+<form action="writeChangeChan1.HTM" method="post"><button type="button" onclick="this.form.submit()">Channel 1</button></form>
+</td>
+<td></td>	
+<td colspan=2 align="center"><form action="writeTxOnOffRadioChan1.HTM" method="post">
+<!--FUNCTIONCALL chan1OnOffRadioButtons --></form></td>
+<td colspan=2 align="center">
+<!--FUNCTIONCALL chan1TxIdShow -->
+</td>
+</tr>
+</table>
+ 
+      </td>
+      <td width="100" align="center">
+        <div id='ajaxReloadTxStatus'> </div>
+      </td>
+  </tr>
+</table>
+ 
+
+<div id='ajaxChannelsStatus'></div>
+<!--
+<DIV ID='ajaxReloadEverything'></DIV>
+<br>
+<DIV ID='ajaxReloadChanBargraph'></DIV>
+<br>
+-->
+
+<br>
+<form action="allChannelsOff.HTM" method="post"><button type="button" onclick="this.form.submit()">All Off</button></form>
+
+
+</body>
+
+</html> 

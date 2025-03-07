@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+
+ <html>
+
+
+<script src="SupportScriptsChan.js"></script>
+<script language="javascript">
+
+</script>
+   <script type="text/javascript">
+   
+      window.onload = function() {
+         document.getElementById("myForm").reset();
+      }
+   
+   </script>
+ <script type="text/JavaScript">
+<!--
+function timedRefresh(timeoutPeriod) {
+	setTimeout("location.reload(true);",timeoutPeriod);
+}
+   --> 
+</script>
+ 
+<script>
+function showPos(event, text) {
+var el, x, y;
+
+el = document.getElementById('PopUp');
+if (window.event) {
+x = window.event.clientX + document.documentElement.scrollLeft
++ document.body.scrollLeft;
+y = window.event.clientY + document.documentElement.scrollTop +
++ document.body.scrollTop;
+}
+else {
+x = event.clientX + window.scrollX;
+y = event.clientY + window.scrollY;
+}
+x -= 2; y -= 2;
+y = y+15
+el.style.left = x + "px";
+el.style.top = y + "px";
+el.style.display = "block";
+document.getElementById('PopUpText').innerHTML = text;
+}
+</script>
+
+<head>
+<title>DNR-1200 Login</title>
+</head>
+
+
+<table border="0" cellpadding="5" cellspacing="0" width="400">
+  <tr>
+    <td align="left" valign="bottom">
+
+<!--
+<img src="tektron4.gif" alt="Tektron" height="100" width="400">
+-->
+	<FONT face="Arial, Sans-Serif" size="2">
+<h2>
+DNR-1200 Login
+</h2>
+    	</FONT>
+    	</table> 
+
+
+<FORM action="writeNamePassword.HTM" method="post">
+<table>
+<tr>
+<td align="center">
+Name: </td><td><input type="text" name="UsrName" value="" maxlength="16" size="16">
+</td></tr>
+<tr>
+<td align="center">
+
+Password: </td><td>
+
+
+
+<input type="password" name="Password" value="" maxlength="16" size="16"><br>
+</td>
+
+</tr>
+<tr>
+<td align="center"></td><td>
+<button type="button" onclick="this.form.submit()">Submit</button><br>
+</td></tr>
+</table>
+</form>
+
+</body>
+
+</html> 

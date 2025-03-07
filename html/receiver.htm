@@ -1,0 +1,273 @@
+
+<html>
+
+<script src="SupportScripts.js"></script>
+<script language="javascript">
+
+</script>
+   <script type="text/javascript">
+   
+      window.onload = function() {
+         document.getElementById("myForm").reset();
+      }
+   
+   </script>
+ <script type="text/JavaScript">
+<!--
+function timedRefresh(timeoutPeriod) {
+	setTimeout("location.reload(true);",timeoutPeriod);
+}
+   --> 
+</script>
+
+ <script>
+function confirmCalTone() {
+    var x;
+    if (document.getElementById("myCheck").checked) 
+    {
+    	if (confirm("Cal Tone extremely loud!  Reduce headphone volume before clicking OK!") == true) {
+        	x = "You pressed OK!";
+        	this.form.submit();
+    	} else {
+        	x = "You pressed Cancel!";
+    	}
+	} else {
+       	this.form.submit();
+	}    	
+}	
+</script>
+    
+   <head>
+   
+      <title>DNR-1200 Receiver Control</title>
+ 	<link href="vumeter.css" rel="stylesheet" type="text/css">
+
+<style>
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button2 {background-color: #008CBA;} /* Blue */
+.button3 {background-color: #f44336;} /* Red */ 
+.button4 {background-color: #e7e7e7; color: black;} /* Gray */ 
+.button5 {background-color: #555555;} /* Black */
+</style>
+
+ 	  
+   </head>
+   
+   <body color="#ffffff" link="#0000ff" vlink="#0000ff" alink="#ff0000>
+<!--INCLUDE HtmlVar.h --> 
+      <font face="Times New Roman,serif">
+
+<table border="0" cellpadding="5" cellspacing="0" width="700">
+	<tr>
+		<td align="left" valign="bottom">
+
+<!--
+<img src="tektron4.gif" alt="Tektron" height="100" width="400">
+-->
+
+			<FONT face="Arial, Sans-Serif" size="2">
+			<h2>
+DNR-1200  
+<!--FUNCTIONCALL displaySerialNum -->
+</h2>
+    		</FONT> 
+		</td>
+		<td align="center" valign="bottom">
+			<FONT face="Arial, Sans-Serif" size="2">
+	      	<h4> 
+<!--			  <a href="Index.htm">Main</a> | --> 
+			  <a href="Channels_txid.htm">Channels</a> |  
+			  <a href="Setup.htm">IP Setup</a> |
+			  <a href="freqSetup.htm">Freq Setup</a> | 
+<!--			  <a href="connected.htm">Connected</a> | -->
+			    <a href="logout.htm">Logout</a> 
+	  
+		  	</h4>
+    		</FONT>  
+		</TD>
+	</tr>
+	<tr>
+		<td colspan="2"><hr size="1" noshade>
+		</td>
+    </tr>
+</table>
+
+<table border="0" cellpadding="5" cellspacing="0" width="700">
+	<tr>
+		<td>
+			<form action="writeLBMsgPost.HTM" method="post">
+				<table border="0" cellpadding="5" cellspacing="0" width="280">
+					<tr>
+						<td colspan="2" align="center" valign="top">
+							<font face="Arial,sans-serif"><h3>Receiver Control</h3>
+							</font>
+						</td>
+					</tr>
+					<tr>
+						<td width="10%" align="right"><font size="2"><b> Select Frequency: </b></font>
+						</td>						
+						<td width="40%">
+
+	<!--FUNCTIONCALL ChannelNum -->
+	
+						</td>
+					</tr>
+					<tr>
+						<td width="10%" align="right"><font size="2"><b> Audio Filter: </b></font>
+						</td>						
+						<td width="25%" ><!--FUNCTIONCALL FilterNum -->
+						</td>
+					</tr>
+					<tr>
+						<td width="50%" align="right"><font size="2"><b> Squelch: </b></font>
+						</td>						
+						<td width="25%" ><!--FUNCTIONCALL Squelch -->
+						</td>
+					</tr>
+					<tr>
+						<td width="10%" align="right"><font size="2"><b>Mode: </b></font>
+						</td>
+						<td width="25%" ><!--FUNCTIONCALL MonoStereoMode -->
+						</td>
+					</tr>
+					<tr>
+						<td width="25%" align="right"><font size="2"><b> Tone No Lock: </b></font> 
+						</td>						
+						<td width="25%"><!--FUNCTIONCALL TNLCheck -->
+						</td>
+					</tr>
+				    <tr>
+						<td width="25%" align="right"><font size="2"><b> Cal Tone: </b></font> 
+						</td>						
+						<td width="25%"><!--FUNCTIONCALL CalToneCheck -->
+						</td>
+					</tr>
+					<tr>
+						<td>
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td>
+						</td>
+						<td>
+						</td>
+					</tr>
+         		</table>
+			</form>
+		</td>
+ 		<td>
+			<table border="0" cellpadding="5" cellspacing="0" width="320">
+				<tr>
+					<td colspan="4" align="center" valign="top"><font face="Arial,sans-serif"><h3>Transmitter Control</h3></font>
+					</td>
+				</tr>
+				<tr>
+     				<td align="right">
+        				<form action="writeTxOffMsgPost.HTM" method="post">
+           					<input type="submit" value="Tx Off" /> 
+        				</form>
+     				</td>
+     				<td  align="center">
+        				<form action="writeTxOnMsgPost.HTM" method="post">
+           					<input type="submit" value="Tx On"/>
+        				</form>
+     				</td>
+    				<td  align="center">
+        				<form action="allChannelsOffRx.HTM" method="post">
+           					<input type="submit" value="All Off"/>
+        				</form>
+     				</td>
+ 					<td align="center">
+						<div ID='ajaxTxStatus'>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="33%" align="right"><font size="2"><b> Transmitter Address: </b></font> 
+					</td>
+					<form action="writeTxAddress.HTM" method="post">
+						<td width="33%"><!--FUNCTIONCALL txAddressValue -->
+						</td>
+						<td><input type="submit" value="Enter"/>
+						</td>
+					</form>
+					</tr>
+				<tr>
+					<td width="33%" align="right"><font size="2"><b> Control Power: </b></font> 
+					</td>
+					<td>
+						<form action="writeControlPower.HTM" method="post">
+							<!--FUNCTIONCALL ControlPower --> 
+						</form>
+					</td>
+					<td> 
+					</td>
+				</tr>
+					<tr>
+						<td width="33%" align="right"><font size="2"><b> Remote Tx Mode: </b></font> 
+						</td>
+							<form action="writeTxMonoStereoMode.HTM" method="post">
+   								<td><!--FUNCTIONCALL TxMonoStereoMode --> 
+							</form>
+						</td>
+						<td> 
+						</td>
+					</tr>
+					<tr> 
+						<td width="33%" align="right"><font size="2"><b> Remote Tx Power: </b></font> 
+						</td>
+							<form action="writeTxPower.HTM" method="post">
+						<td><!--FUNCTIONCALL TxPower -->
+						    </form> 
+						</td>
+						<td> 
+						</td>
+					</form>
+				</tr>
+				<tr>
+					<td>
+					</td>
+					<td>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					</td>
+					<td> 
+					</td>
+					<td> 
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table> 
+
+<DIV ID='ajaxReloadEverything'></DIV>
+
+
+<noscript>
+<H1>This browser requires JavaScript to run properly.</H1>
+</noscript>
+<DIV ID='ajaxTest'>
+
+</DIV>
+   
+   </body>
+
+</html>
+
